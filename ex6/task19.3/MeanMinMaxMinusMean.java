@@ -1,0 +1,18 @@
+// Program to measure how much the mean of the integer command line arguments
+// differs from the average of their minimum and maximum.
+// Doesn't catch run time exception.
+public class MeanMinMaxMinusMean
+{
+  public static void main(String[] args) throws RuntimeException
+  {
+    int[] array = new int[args.length];
+    for(int index = 0; index < args.length; index++)
+      array[index] = Integer.parseInt(args[index]);
+
+    Triple stats = IntArrayStats.getStats(array);
+    int max = ((Integer)stats.getFirst()).intValue();
+    int min = ((Integer)stats.getSecond()).intValue();
+    double mean = ((Double)stats.getThird()).doubleValue();
+    System.out.println((min + max) / 2.0 - mean);
+  }
+}
