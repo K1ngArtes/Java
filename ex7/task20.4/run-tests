@@ -1,0 +1,7 @@
+#!/bin/bash
+set -v
+java TestMinMaxArray 0
+java TestMinMaxArray 0 1
+java TestMinMaxArray 5 3 7 8 1
+java TestMinMaxArray 1 2 3 4 4 1 5
+java TestMinMaxArray "hello" "hi" "abc"

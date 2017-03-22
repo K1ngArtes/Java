@@ -1,0 +1,33 @@
+#!/bin/bash
+set -v
+java DeleteField test 2
+
+java DeleteField 5 <<END
+Hi	Hello   Good    Well
+Soap    Car     Java    Dance
+Bomb    Day     School  Uni
+END
+
+java DeleteField 3 <<END
+Hi      Hello   Good    Well
+Soap    Car     Java    Dance
+Bomb    Day     School  Uni
+END
+
+java DeleteField 2 <<END
+Hi	Hello   Good    Well
+Soap    Car     Java    Dance
+Bomb    Day     School  Uni
+END
+
+java DeleteField 1 <<END
+Hi	Hello   Good    Well
+Soap    Car     Java    Dance
+Bomb    Day     School  Uni
+END
+
+java DeleteField 4 <<END
+Hi      Hello   Good    Well
+Soap    Car     Java    Dance
+Bomb    Day     School  Uni
+END
